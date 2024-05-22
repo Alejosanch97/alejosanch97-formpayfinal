@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+      integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+   
+    <title>Payment form</title>
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <div class="row payment">
+          <h4>Payment form example</h4>
+        </div>
+        <div class="missing-alert">
+          <p>Some fields are missing</p>
+        </div>
+        <div class="Parte1">
+          <div class="row">
+            <div class="col-5">
+              <label for="card">Card #</label
+              ><br />
+              <input
+                type="text"
+                name="card"
+                pattern="[0-9]*"
+                id="card-num"
+                placeholder="XXXXXXXXXXXXXXXX"
+              />
+            </div>
+            <div class="col-3">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                name="cvc"
+                pattern="[0-9]*"
+                id="cvc-num"
+                placeholder="000"
+              />
+            </div>
+            <div class="col-4">
+              <label for="amount">Amount</label
+              >
+              <!-- add '$' as id::before -->
+              <input
+                type="text"
+                name="amount"
+                id="dol-amount"
+                placeholder="$ Amount"
+                pattern="[0-9]*"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="first-name"
+              >First Name</label
+            ><br />
+            <input
+              type="first-name"
+              id="first-name"
+              name="first-name"
+            />
+            <br />
+            <label for="city">City</label
+            ><br />
+            <input
+              type="city"
+              name="city"
+              id="city"
+            /><br />
+            <label for="payment-type"
+              >We accept:</label
+            ><br />
+            <div class="radio-div">
+              <div class="c-card-box">
+                <input
+                  type="radio"
+                  name="payment-type"
+                  id="mastercard"
+                  checked
+                />
+                <i
+                  class="fa-brands fa-cc-mastercard"
+                ></i>
+              </div>
+              <div class="c-card-box">
+                <input
+                  type="radio"
+                  name="payment-type"
+                  id="visa"
+                />
+                <i
+                  class="fa-brands fa-cc-visa"
+                ></i>
+              </div>
+              <div class="c-card-box">
+                <input
+                  type="radio"
+                  name="payment-type"
+                  id="diners-club"
+                />
+                <i
+                  class="fa-brands fa-cc-diners-club"
+                ></i>
+              </div>
+              <div class="c-card-box">
+                <input
+                  type="radio"
+                  name="payment-type"
+                  id="discover"
+                />
+                <i
+                  class="fa-brands fa-cc-discover"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="last-name"
+              >Last Name</label
+            ><br />
+            <input
+              type="last-name"
+              name="last-name"
+              id="last-name"
+            />
+            <div
+              class="middle-right-center-div"
+            >
+              <div class="state-div">
+                <label for="state"
+                  >State</label
+                ><br />
+                <select
+                  name="state"
+                  id="state"
+                >
+                  <option value="">
+                    Pick a region
+                  </option>
+                  <option value="At">
+                    Atlantico
+                  </option>
+                  <option value="Bo">
+                    Bolivar
+                  </option>
+                  <option value="Ce">
+                    Cesar
+                  </option>
+                  <option value="Co">
+                    Cordoda
+                  </option>
+                  <option value="Gu">
+                    La guajira
+                  </option>
+                  <option value="Ma">
+                    Magdalena
+                  </option>
+                  <option value="SC">
+                    Sucre
+                  </option>
+                  <option value="SAI">
+                    San Andres
+                  </option>
+                </select>
+              </div>
+              <div class="postal-code-div">
+                <label for="postal-code"
+                  >Postal Code</label
+                ><br />
+                <input
+                  type="text"
+                  name="postal-code"
+                  id="postal-code"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <label for="message"
+              >Message</label
+            ><br />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="3"
+            ></textarea>
+            <p class="notes">
+              Add any notes here
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-div">
+        <button
+          type="button"
+          class="btn btn-secondary"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
